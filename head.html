@@ -1,5 +1,30 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/scripts/lib-franklin.js" type="module" crossorigin="use-credentials"></script>
 <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
-<link rel="stylesheet" href="/styles/styles.css"/>
+<script src="/scripts/alloy.min.js" type="module" crossorigin="use-credentials"></script>
+<link rel="stylesheet" href="/styles/styles.css" />
 <link rel="icon" href="data:,">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' *.demdex.net;
+      script-src 'self' 'unsafe-inline' assets.adobedtm.com cdn.tt.omtrdc.net;
+      style-src 'self' 'unsafe-inline' cdn.tt.omtrdc.net;
+      img-src * data:;
+      connect-src 'self' *.hlx.live *.alloyio.com *.demdex.net *.adobedc.net" 
+/>
+<script>
+    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+    []).push(o),n[o]=function(){var u=arguments;return new Promise(
+    function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+    (window,["alloy"]);
+</script>
+<script>
+    alloy("configure", {
+    // defaultConsent: { general: "pending" },
+    edgeDomain:
+        location.host.indexOf("hlx.live") !== -1
+        ? "*.hlx.live"
+        : undefined,
+    configId: "8888888",
+    orgId: "53A16ACB5CC1D3760A495C99@AdobeOrg",
+    debugEnabled: true,
+    });
+</script>
