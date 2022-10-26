@@ -1,5 +1,44 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/scripts/lib-franklin.js" type="module" crossorigin="use-credentials"></script>
 <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
-<link rel="stylesheet" href="/styles/styles.css"/>
+<link rel="stylesheet" href="/styles/styles.css" />
 <link rel="icon" href="data:,">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' *.demdex.net;
+      script-src 'self' 'unsafe-inline' assets.adobedtm.com cdn.tt.omtrdc.net;
+      style-src 'self' 'unsafe-inline' cdn.tt.omtrdc.net;
+      img-src * data:;
+      connect-src 'self' https://*.hlx.live *.alloyio.com *.demdex.net *.adobedc.net" />
+<script>
+    !function (e, a, n, t) {
+        var i = e.head; if (i) {
+            if (a) return;
+            var o = e.createElement("style");
+            o.id = "alloy-prehiding", o.innerText = n, i.appendChild(o),
+                setTimeout(function () { o.parentNode && o.parentNode.removeChild(o) }, t)
+        }
+    }
+        (document, document.location.href.indexOf("mboxEdit") !== -1, ".personalization-container { opacity: 0 !important }", 3000);
+</script>
+<script>
+    !function (n, o) {
+        o.forEach(function (o) {
+            n[o] || ((n.__alloyNS = n.__alloyNS ||
+                []).push(o), n[o] = function () {
+                    var u = arguments; return new Promise(
+                        function (i, l) { n[o].q.push([i, l, u]) })
+                }, n[o].q = [])
+        })
+    }
+        (window, ["alloy"]);
+</script>
+<script src="/scripts/alloy.min.js" async></script>
+<script>
+    alloy("configure", {
+        edgeConfigId: "9999999",
+        orgId: "53A16ACB5CC1D3760A495C99@AdobeOrg",
+        debugEnabled: true,
+    });
+    alloy("sendEvent", {
+        renderDecisions: false
+    });
+</script>
