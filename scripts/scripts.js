@@ -84,10 +84,34 @@ export function addFavIcon(href) {
   }
 }
 
+async function loadAlloy() {
+  const mod = await import ('/scripts/alloy.min.js');
+  !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+    []).push(o),n[o]=function(){var u=arguments;return new Promise(
+    function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+    (window,["alloy"]);
+    alloy("configure", {
+    // defaultConsent: { general: "pending" },
+    edgeDomain:
+        location.host.indexOf("hlx.live") !== -1
+        ? "*.hlx.live"
+        : undefined,
+    configId: "8888888",
+    orgId: "53A16ACB5CC1D3760A495C99@AdobeOrg",
+    });
+}
+
 /**
  * loads everything that doesn't need to be delayed.
  */
 async function loadLazy(doc) {
+
+  loadAlloy().then(() => {
+    alloy("sendEvent", {
+      renderDecisions: false
+    });
+  });
+
   const main = doc.querySelector('main');
   await loadBlocks(main);
 
