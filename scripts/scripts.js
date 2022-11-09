@@ -106,11 +106,7 @@ async function loadAlloy() {
  */
 async function loadLazy(doc) {
 
-  loadAlloy().then(() => {
-    alloy("sendEvent", {
-      renderDecisions: false
-    });
-  });
+  loadAlloy();
 
   const main = doc.querySelector('main');
   await loadBlocks(main);
